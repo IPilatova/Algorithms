@@ -36,6 +36,4 @@ public class Intersection {
 
         System.out.println(Arrays.toString(intersection(arr1, arr2)));
     }
-
-
 }

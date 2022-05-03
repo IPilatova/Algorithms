@@ -7,8 +7,4 @@ public class IsPositiveNumber {
              return false;
          }
     }
-
-
-
-
 }

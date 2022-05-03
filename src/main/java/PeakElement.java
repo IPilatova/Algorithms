@@ -50,6 +50,4 @@ public class PeakElement {
         int[] arr = {1, 2, 7, 7, 1, 7, 7, 7};
         System.out.println(Arrays.toString(peakElement(arr)));
     }
-
-
 }

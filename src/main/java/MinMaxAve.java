@@ -30,8 +30,5 @@ public class MinMaxAve {
         int[] arr = {1, 2, 3, 4, 5, 6, -70, 8};
 
         System.out.println(Arrays.toString(minMaxAve(arr, 2,6)));
-
     }
-
-
 }
