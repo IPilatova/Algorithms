@@ -1,6 +1,6 @@
 public class IsPositiveNumber {
 
-    public boolean isPositiveNumber (long number) {
+    public boolean isPositiveNumber (int number) {
          if (number >= 0) {
              return true;
          } else {
