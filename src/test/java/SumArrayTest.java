@@ -57,5 +57,4 @@ public class SumArrayTest {
 
         Assertions.assertEquals(actualResult, expectedResult);
     }
-
 }

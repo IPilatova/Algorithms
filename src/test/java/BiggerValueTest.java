@@ -35,7 +35,6 @@ public class BiggerValueTest {
         int actualResult = bv.biggerValue(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
-
     }
 
     @Test
@@ -49,7 +48,6 @@ public class BiggerValueTest {
         int actualResult = bv.biggerValue(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
-
     }
 
     @Test
@@ -63,7 +61,6 @@ public class BiggerValueTest {
         int actualResult = bv.biggerValue(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
-
     }
 
     @Test
@@ -77,8 +74,5 @@ public class BiggerValueTest {
         int actualResult = bv.biggerValue(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
-
     }
-
-
 }
