@@ -33,7 +33,7 @@ public class IsPositiveNumberTest {
     @Order(3)
     @Test
     public void testIsPositiveNumberHappyPathNegativeNumber() {
-        //0
+        //-555
 
         int number = -555;
 

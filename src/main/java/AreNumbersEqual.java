@@ -1,8 +1,9 @@
 public class AreNumbersEqual {
 
-    public int areNumbersEqual (int a, int b) {
+    public byte areNumbersEqual (int a, int b) {
 
-        int result;
+        byte result;
+        //byte result = (byte) Integer.compare(a, b);
 
         if (a > b) {
             result = 1;
