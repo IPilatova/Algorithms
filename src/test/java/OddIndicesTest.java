@@ -7,7 +7,9 @@ public class OddIndicesTest {
     @Order(1)
     @Test
     public void testOddIndicesHappyPathArray() {
+
         //{590, 985, 68}
+
         int[] arr = {-45, 590, 234, 985, 12, 68};
         int[] expectedResult = {590, 985, 68};
 
@@ -19,7 +21,9 @@ public class OddIndicesTest {
 
     @Test
     public void testOddIndicesEmptyArray() {
+
         //пустой массив {}
+
         int[] arr = {};
         int[] expectedResult = {};
 
@@ -31,7 +35,9 @@ public class OddIndicesTest {
 
     @Test
     public void testOddIndicesOneElementArray() {
+
         //массив из 1 {}
+
         int[] arr = {55};
         int[] expectedResult = {};
 
@@ -43,7 +49,9 @@ public class OddIndicesTest {
 
     @Test
     public void testOddIndicesThreeElementArray() {
-        //массив из 3 {88} (проверить, что расчет длины массивы верный)
+
+        //массив из 3 элементов (проверить, что расчет длины массивы верный)
+
         int[] arr = {1, 2147483647, -789};
         int[] expectedResult = {2147483647};
 
@@ -55,7 +63,9 @@ public class OddIndicesTest {
 
     @Test
     public void testOddIndicesAllZeroArray() {
+
         //все нули {0, 0, 0}
+
         int[] arr = {0, 0, 0, 0, 0, 0};
         int[] expectedResult = {0, 0, 0};
 
@@ -64,7 +74,4 @@ public class OddIndicesTest {
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
-
-
-
-    }
+}

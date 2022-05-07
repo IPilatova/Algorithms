@@ -4,6 +4,13 @@ import org.junit.jupiter.api.*;
 
 public class MinMaxAveTest {
 
+    MinMaxAve mma;
+
+    @BeforeEach
+    void setUp() {
+        mma = new MinMaxAve();
+    }
+
     @Order(1)
     @Test
     public void testMinMaxAveHappyPathPositiveNumbers() {
@@ -14,7 +21,6 @@ public class MinMaxAveTest {
         int index2 = 6;
         int[] expectedResult = {3, 7, 5};
 
-        MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
@@ -30,7 +36,6 @@ public class MinMaxAveTest {
         int index2 = 6;
         int[] expectedResult = {-50, -3, -14};
 
-        MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
@@ -45,7 +50,6 @@ public class MinMaxAveTest {
         int index2 = 6;
         int[] expectedResult = {};
 
-        MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
@@ -60,7 +64,20 @@ public class MinMaxAveTest {
         int index2 = 0;
         int[] expectedResult = {1, 1, 1};
 
-        MinMaxAve mma = new MinMaxAve();
+        int[] actualResult = mma.minMaxAve(arr, index1, index2);
+
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testMinMaxAveIndexOneEqualsIndexTwo() {
+//         индекс1 = индекс2
+//        ({1, 2, 3, 4, 5, 6, 7, 8}, 6, 6) →  {7, 7, 7}
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int index1 = 6;
+        int index2 = 6;
+        int[] expectedResult = {7, 7, 7};
+
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
@@ -75,22 +92,34 @@ public class MinMaxAveTest {
         int index2 = 2;
         int[] expectedResult = {3, 7, 5};
 
-        MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void testMinMaxAveIndexIsNegative() {
-//         индекс отрицательный
+    public void testMinMaxAveIndexOneIsNegative() {
+//         индекс1 отрицательный
 //      ({1, 2, 3, 4, 5, 6, 7, 8}, -2, 6) →  {}
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
         int index1 = -2;
         int index2 = 6;
         int[] expectedResult = {};
 
-        MinMaxAve mma = new MinMaxAve();
+        int[] actualResult = mma.minMaxAve(arr, index1, index2);
+
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testMinMaxAveIndexTwoIsNegative() {
+//         индекс2 отрицательный
+//      ({1, 2, 3, 4, 5, 6, 7, 8}, 2, -6) →  {}
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int index1 = 2;
+        int index2 = -6;
+        int[] expectedResult = {};
+
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
@@ -98,14 +127,13 @@ public class MinMaxAveTest {
 
     @Test
     public void testMinMaxAveLengthArrayLessIndexOne() {
-//         длина массива меньше индекса2
+//         длина массива меньше индекса1
 //      ({1, 2, 3, 4, 5, 6, 7, 8}, 9, 10) →  {}
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
         int index1 = 9;
         int index2 = 10;
         int[] expectedResult = {};
 
-        MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
@@ -120,7 +148,6 @@ public class MinMaxAveTest {
         int index2 = 9;
         int[] expectedResult = {};
 
-        MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
@@ -135,7 +162,6 @@ public class MinMaxAveTest {
         int index2 = 6;
         int[] expectedResult = {-5, 5, 0};
 
-        MinMaxAve mma = new MinMaxAve();
         int[] actualResult = mma.minMaxAve(arr, index1, index2);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);

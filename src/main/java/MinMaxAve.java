@@ -4,12 +4,11 @@ public class MinMaxAve {
 
         int[] emptyArr = new int[0];
 
-        if (arr.length < index1 || arr.length < index2) {
-            return emptyArr;
-        }
+        if (arr == null
+                || arr.length < index1 || arr.length < index2
+                || index1 < 0 || index2 < 0) {
 
-        if (index1 < 0 || index2 < 0) {
-            return emptyArr;
+           return emptyArr;
         }
 
         int min;

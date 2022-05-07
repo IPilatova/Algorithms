@@ -15,5 +15,4 @@ public class AreNumbersEqual {
 
         return result;
     }
-
 }

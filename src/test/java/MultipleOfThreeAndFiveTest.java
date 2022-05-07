@@ -4,6 +4,13 @@ import org.junit.jupiter.api.*;
 
 public class MultipleOfThreeAndFiveTest {
 
+    MultipleOfThreeAndFive motaf;
+
+    @BeforeEach
+    void setUp() {
+        motaf = new MultipleOfThreeAndFive();
+    }
+
     //15 | 5 | 3 | 0 | 1 | -15 | -5 | -3
 
     @Order(1)
@@ -13,7 +20,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = 15;
         String expectedResult = "Good Number";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -26,7 +32,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = 5;
         String expectedResult = "Poor Number";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -39,7 +44,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = 3;
         String expectedResult = "Bad Number";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -52,7 +56,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = 1;
         String expectedResult = "-1";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -64,7 +67,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = 0;
         String expectedResult = "Good Number";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -76,7 +78,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = -15;
         String expectedResult = "Good Number";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -88,7 +89,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = -5;
         String expectedResult = "Poor Number";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -100,7 +100,6 @@ public class MultipleOfThreeAndFiveTest {
         int m = -3;
         String expectedResult = "Bad Number";
 
-        MultipleOfThreeAndFive motaf = new MultipleOfThreeAndFive();
         String actualResult = motaf.multipleOfThreeAndFive(m);
 
         Assertions.assertEquals(expectedResult, actualResult);

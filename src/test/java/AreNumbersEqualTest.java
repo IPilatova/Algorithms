@@ -4,6 +4,13 @@ import org.junit.jupiter.api.*;
 
 public class AreNumbersEqualTest {
 
+    AreNumbersEqual ane;
+
+    @BeforeEach
+    void setUp() {
+        ane = new AreNumbersEqual();
+    }
+
     @Order(1)
     @Test
     public void testAreNumbersEqualHappyPathNumbersEquals() {
@@ -12,7 +19,6 @@ public class AreNumbersEqualTest {
         int b = 89;
         byte expectedResult = 0;
 
-        AreNumbersEqual ane = new AreNumbersEqual();
         byte actualResult = ane.areNumbersEqual(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -26,7 +32,6 @@ public class AreNumbersEqualTest {
         int b = -89;
         byte expectedResult = 1;
 
-        AreNumbersEqual ane = new AreNumbersEqual();
         byte actualResult = ane.areNumbersEqual(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
@@ -40,10 +45,8 @@ public class AreNumbersEqualTest {
         int b = 89;
         byte expectedResult = -1;
 
-        AreNumbersEqual ane = new AreNumbersEqual();
         byte actualResult = ane.areNumbersEqual(a, b);
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
-
 }
