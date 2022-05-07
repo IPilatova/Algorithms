@@ -1,8 +1,6 @@
-import java.util.Arrays;
-
 public class Intersection {
 
-    public static int[] intersection (int[] arr1, int[] arr2) {
+    public int[] intersection (int[] arr1, int[] arr2) {
 
         int l = 0;
 
@@ -29,11 +27,11 @@ public class Intersection {
         return resultArr;
     }
 
-    public static void main(String[] args) {
-
-        int[] arr1 = {1, 2, 4, 5, 89};
-        int[] arr2 = {8, 9, 45};
-
-        System.out.println(Arrays.toString(intersection(arr1, arr2)));
-    }
+//    public static void main(String[] args) {
+//
+//        int[] arr1 = {1, 2, 4, 5, 89};
+//        int[] arr2 = {8, 9, 45};
+//
+//        System.out.println(Arrays.toString(intersection(arr1, arr2)));
+//    }
 }
