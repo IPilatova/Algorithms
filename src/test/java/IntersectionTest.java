@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 public class IntersectionTest {
 
 //    написать негативные тесты
+
     @Order(1)
     @Test
     public void testIntersectionHappyPathPositiveNumbers() {

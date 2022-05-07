@@ -1,8 +1,6 @@
-import java.util.Arrays;
-
 public class PeakElement {
 
-    public static int[] peakElement (int[] arr) {
+    public int[] peakElement (int[] arr) {
 
 //        определим длину массива
         int l = 0;
@@ -45,9 +43,9 @@ public class PeakElement {
         return resultArr;
     }
 
-    public static void main(String[] args) {
-
-        int[] arr = {1, 2, 7, 7, 1, 7, 7, 7};
-        System.out.println(Arrays.toString(peakElement(arr)));
-    }
+//    public static void main(String[] args) {
+//
+//        int[] arr = {1, 2, 7, 7, 1, 7, 7, 7};
+//        System.out.println(Arrays.toString(peakElement(arr)));
+//    }
 }
