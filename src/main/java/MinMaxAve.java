@@ -2,57 +2,40 @@ public class MinMaxAve {
 
     public int[] minMaxAve (int[] arr, int index1, int index2) {
 
-        int[] emptyArr = new int[0];
-
-        if (arr == null
+        if (arr.length == 0
                 || arr.length < index1 || arr.length < index2
                 || index1 < 0 || index2 < 0) {
 
-           return emptyArr;
+           return new int[]{};
         }
 
-        int min;
-        int max;
-        int avg;
-        int[] resultArr = new int[3];
+        int[] resultArr = {Integer.MAX_VALUE, Integer.MIN_VALUE, 0};
 
         if (index1 < index2) {
-            min = arr[index1];
-            max = arr[index1];
-            avg = arr[index1];
-            for (int i = index1 + 1; i < index2 + 1; i++) {
-                if (arr[i] < min) {
-                    min = arr[i];
+            for (int i = index1; i <= index2; i++) {
+                if (arr[i] < resultArr[0]) {
+                    resultArr[0] = arr[i];
                 }
-                if (arr[i] > max) {
-                    max = arr[i];
+                if (arr[i] > resultArr[1]) {
+                    resultArr[1] = arr[i];
                 }
-                avg += arr[i];
+                resultArr[2] += arr[i];
             }
         } else {
-            min = arr[index2];
-            max = arr[index2];
-            avg = arr[index2];
-            for (int i = index2 + 1; i < index1 + 1; i++) {
-                if (arr[i] < min) {
-                    min = arr[i];
+            for (int i = index2; i <= index1; i++) {
+                if (arr[i] < resultArr[0]) {
+                    resultArr[0] = arr[i];
                 }
-                if (arr[i] > max) {
-                    max = arr[i];
+                if (arr[i] > resultArr[1]) {
+                    resultArr[1] = arr[i];
                 }
-                avg += arr[i];
+                resultArr[2] += arr[i];
             }
         }
-
-        avg = avg / (Math.abs(index2 - index1) + 1);
-
-        resultArr[0] = min;
-        resultArr[1] = max;
-        resultArr[2] = avg;
+        resultArr[2] = resultArr[2] / (Math.abs(index2 - index1) + 1);
 
         return resultArr;
     }
-
 //    public static void main(String[] args) {
 //        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
 //        System.out.println(Arrays.toString(minMaxAve(arr, 2,6)));

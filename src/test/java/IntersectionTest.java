@@ -18,8 +18,8 @@ public class IntersectionTest {
     public void testIntersectionHappyPathPositiveNumbers() {
 //        {1, 2, 4, 5, 89}, {8, 9, 4, 2} → {2, 4}
 
-        int[] arr1 = {1, 2, 4, 5, 89, 4, 2};
-        int[] arr2 = {8, 9, 4, 2, 4, 2};
+        int[] arr1 = {1, 2, 4, 5, 89};
+        int[] arr2 = {8, 9, 4, 2, 2};
         int[] expectedResult = {2, 4};
 
         int[] actualResult = is.intersection(arr1, arr2);
